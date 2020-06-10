@@ -1,0 +1,100 @@
+<html>
+
+	<head>
+	<style>
+	.myDiv {
+		border: 1px outset teal;
+		background-color: 065556;
+		text-align: center;
+	}
+	.popupDiv {
+		border: 1px outset teal;
+		background-color: #051D21;
+		text-align: center;
+		display: inline-block;
+	}
+	.monospace {
+	font-family: Arial, Helvetica, sans-serif;
+	}
+	.button {
+		background-color: #0A7C7E ; /* Green */
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	</style>
+	</head>
+	<header>
+		<title>ElectronHippo's Youtube</title>
+	</header>
+	<body style="background-image: url(anger.png); background-repeat:no-repeat; background-size:cover">
+		 
+		<div class="myDiv">
+			<center>
+				<h1 style="color:white", class="monospace"> ElectronHippo's Website </h1>
+			</center>
+			
+
+		</div>
+		<a href="https://www.youtube.com/channel/UCttrkR0FU34Fx-ACjnkG4CQ", class="button">YT Channel</a>
+		<button onclick="videodropdown()", id="videodropdown", class="button">My Videos </button>
+		<button onclick="downloadsdropdown()", id="downloadsdropdown", class="button">Downloads</button>
+		<button onclick="linksdropdown()", id="linksdropdown", class="button">Links</button>
+		<br>
+		<p id="videos"></p>
+		<script>
+			var droppeddown;
+			droppeddown=false;
+			function videodropdown(){
+			if (droppeddown == false){
+				document.getElementById("videos").innerHTML = "<center> <div class='popupDiv'> <h2 style='color:white', class='monospace'>Latest Videos</h2><br><p style='color:white'>No Videos here yet!</p></div></center>"
+
+				droppeddown = true
+				droppeddown1 = false
+				droppeddown2 = false
+				
+			}else{
+				document.getElementById("videos").innerHTML = " "
+
+				droppeddown=false
+			}
+			}
+			var droppeddown1;
+			droppeddown1=false;
+			function downloadsdropdown(){
+			if (droppeddown1 == false){
+				document.getElementById("videos").innerHTML = "<center> <div class='popupDiv'> <h2 style='color:white', class='monospace'>Downloads: Datapacks and more!</h2><br><p style='color:white'>No Downloads here yet!</p></div></center>"
+				droppeddown2 = false
+				droppeddown1 = true
+				droppeddown = false
+				
+			}else{
+				document.getElementById("videos").innerHTML = " "
+
+				droppeddown1=false
+			}
+			}
+			var droppeddown2;
+			droppeddown2=false;
+			function linksdropdown(){
+			if (droppeddown2 == false){
+				document.getElementById("videos").innerHTML = "<center> <div class='popupDiv'> <h2 style='color:white', class='monospace'>Links</h2><br><a style='color:white', href='https:greybeetle213.pythonanywhere.com'>Greybeetle213's Amazing Datapack Creator!</a><br><p style='color:red'>DOES NOT WORK ON MICROSOFT EDGE!</p></div></center>"
+
+				droppeddown2 = true
+				droppeddown = false
+				droppeddown1 = false
+				
+			}else{
+				document.getElementById("videos").innerHTML = " "
+
+				droppeddown2=false
+			}
+			}
+		</script>
+	</body>
+</html>
